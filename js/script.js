@@ -5,20 +5,16 @@ let intervalId = null;
 document.addEventListener("DOMContentLoaded", initializeSlider);
 
 function initializeSlider(){
-
   if (slides.length > 0) {
     slides[slideIndex].classList.add("displaySlide");
     intervalId = setInterval(nextSlide, 3000);
-
   }
 }
 
 function showSlide(index){
-
   if (index >= slides.length) {
     slideIndex = 0;
-  }
-  else if(index < 0){
+  }else if(index < 0){
     slideIndex = slides.length - 1;
   }
 
